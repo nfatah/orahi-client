@@ -1,19 +1,27 @@
+/* 
+* Main App component 
+*/
+
+
+
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router } from 'react-router-dom';
+import MainNavBar from './components/partials/MainNavBar';
+import Routes from './components/Routes';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to Orahi</h2>
+      <Router>
+        <div className="App">
+          <MainNavBar />
+          <Routes />
+          <p className="App-intro">
+            Built with <code>React</code> and <code>NodeJS</code>
+          </p>
         </div>
-        <p className="App-intro">
-          Built with <code>React</code> and NodeJS
-        </p>
-      </div>
+      </Router>
     );
   }
 }
